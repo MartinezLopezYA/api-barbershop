@@ -1,6 +1,11 @@
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine # type: ignore
 from sqlalchemy.orm import sessionmaker # type: ignore
 from app.config.settings import settings
+from sqlalchemy.ext.declarative import declarative_base # type: ignore
+
+
+Base = declarative_base()
+
 
 DATABASE_URL = settings.DATABASE_URL
 
